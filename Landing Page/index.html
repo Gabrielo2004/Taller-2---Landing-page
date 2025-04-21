@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafting Futaleufú - Reservas</title>
+  <link rel="stylesheet" href="asset/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>RAFTING EN EL RIO FUTALEUFÚ</h1>
+      <p>Reserva tu aventura en el mejor río de aguas blancas del mundo</p>
+    </div>
+  </header>
+
+  <!-- Formulario de Reserva -->
+  <main class="container">
+    <form id="reservaForm" class="reserva-form">
+      <h2>Reserva tu Cupo</h2>
+      
+      <!-- Sección de Datos Generales -->
+      <div class="seccion-general">
+        <h3>Información General</h3>
+        
+        <!-- Fecha y Sección -->
+        <div class="form-group">
+          <label for="fecha">Fecha de la actividad:</label>
+          <input type="date" id="fecha" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="seccion">Sección del río:</label>
+          <select id="seccion" required>
+            <option value="">Seleccione sección</option>
+            <option value="Puente-a-Puente">Puente a Puente</option>
+            <option value="Puente-Macal">Puente Macal</option>
+            <option value="Full-Day">Full Day</option>
+            <option value="Milla-Salvaje">Milla Salvaje</option>
+            <option value="Infierno">Infierno</option>
+          </select>
+        </div>
+        
+        <!-- Horario -->
+        <div class="form-group">
+          <label>Horario:</label>
+          <div class="radio-group">
+            <input type="radio" name="horario" value="10:00" id="horario-am" required>
+            <label for="horario-am">10:00 AM</label>
+          </div>
+          <div class="radio-group">
+            <input type="radio" name="horario" value="15:00" id="horario-pm">
+            <label for="horario-pm">15:00 PM</label>
+          </div>
+        </div>
+        
+        <!-- N° Personas -->
+        <div class="form-group">
+          <label for="cantidad-personas">Número de personas (1-12):</label>
+          <input type="number" id="cantidad-personas" min="1" max="12" required>
+        </div>
+      </div>
+      
+      <!-- Sección de Participantes (aparece dinámicamente) -->
+      <div id="seccion-participantes" class="seccion-participantes">
+        <h3>Información de los Participantes</h3>
+        <div id="formularios-participantes" class="participantes-list"></div>
+      </div>
+
+      <button type="submit" id="submit-btn">Reservar Ahora</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Rafting en el río Futaleufú. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="asset/js/scripts.js"></script>
+</body>
+</html>
